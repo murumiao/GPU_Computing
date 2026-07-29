@@ -1,9 +1,10 @@
 NUMBER_PROCESSES=2
 # FILE_PATH="./bin/distributed_spmv"
-# FILE_PATH="./bin/distributed_spmv_2D"
-FILE_PATH="./bin/distributed_spmv_NCCL"
+FILE_PATH="./bin/distributed_spmv_2D"
+# FILE_PATH="./bin/distributed_spmv_NCCL"
 # MATRIX_PATH="./data/tmp2.mtx"
-MATRIX_PATH="./data/sorted_ASIC_680ks.mtx"
+# MATRIX_PATH="./data/sorted_ASIC_680ks.mtx"
+MATRIX_PATH="./data/sorted_matrix.mtx"
 
 mpiexec -n $NUMBER_PROCESSES $FILE_PATH $MATRIX_PATH 0 128 1024 
 # mpiexec -n $NUMBER_PROCESSES $FILE_PATH $MATRIX_PATH 0 128 1024 --lb=1
